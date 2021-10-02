@@ -247,13 +247,13 @@ int proof(Solution &S) {
     for(i=0;i<M;i++) {
         if(S.IW[i]>B[i]) {
             assign = 1;
-            printf("<= errer ! \n");
+            //printf("<= errer ! \n");
         } // violacion restriccion capacidad maxima
     } 
     for(i=M;i<M+Q;i++) {
         if (S.IW[i]<B[i]) {
             assign = 1;
-            printf(">= errer ! \n");
+            //printf(">= errer ! \n");
         } // violacion restriccion capacidad minima
     }
 
@@ -707,7 +707,7 @@ void Swap_tabu_search(Solution &S, double X, float min, float max) {
     int K, flag;
     int count; 
     int assign, Ncount, Ncount1, Ncount2;
-    double pho, eta; 
+    double pho, eta;
 	int num, num1; 
     int n_drop, n_add;
 	long int sum_penalty; 
