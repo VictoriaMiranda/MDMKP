@@ -48,7 +48,7 @@ int media;
 float core;
 int seed;
 int **R;           // matriz de pesos
-int N, M, Q;       // nº objetos, restricciones de capacidad minima, y maxima
+int N, M, Q, BKV;       // nº objetos, restricciones de capacidad minima, y maxima
 Solution SC;       // solucion actual
 Solution OS;
 Solution S_BEST;   // mejor solucion actual
@@ -85,7 +85,7 @@ void Initializing(float min, float max) {
         //std::cout << "### Erreur open, File_Name " << File_Name << endl;
         exit(0);
     } 
-	FIC1 >> N >> M >> Q;
+	FIC1 >> N >> M >> Q >> BKV;
  
 	P = new int [N];
     E = new float [N];
@@ -1043,7 +1043,7 @@ int main(int argc, char **argv) {
 
     srand(seed);
     TwoPhaseSearch(min,max);
-    std::cout << -1*G_BEST.f << endl;
+    sstd::cout << 100.0*(BKV-G_BEST.f)/BKV << endl;
     
     return 1;	
 }
